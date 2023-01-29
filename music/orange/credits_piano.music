@@ -1,0 +1,5 @@
+(supertux-music
+  (file "credits_piano.ogg")
+  (loop-begin 0)
+  (loop-at    107)
+)

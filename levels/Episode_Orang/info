@@ -1,0 +1,7 @@
+(supertux-level-subset
+  (title (_ "Episode Orang"))
+  (description (_ ""))
+  (levelset #f)
+  (contrib-type "user")
+  (hide-from-contribs #f)
+)

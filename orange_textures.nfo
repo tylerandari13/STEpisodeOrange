@@ -1,0 +1,8 @@
+(supertux-addoninfo
+  (id "episode-orange-textures")
+  (version 1)
+  (type "resourcepack")
+  (title "Episode Orange Textures")
+  (author "tylerandari12")
+  (license "CC-BY-SA 4.0 International")
+)
