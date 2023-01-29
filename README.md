@@ -14,4 +14,4 @@ As of currently you will need to install a special build of SuperTux to use Epis
 
 * Put the folder you took out in `%appdata%/supertux2/levels`.
 
-If you followed the steps correctly you should be able to use this version if Episode Orange.
+If you followed the steps correctly you should be able to use this version of Episode Orange.
