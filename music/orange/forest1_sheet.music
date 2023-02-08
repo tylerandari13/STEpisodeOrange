@@ -1,0 +1,5 @@
+(supertux-music
+  (file "forest1_sheet.ogg")
+  (loop-begin 13.7103)
+  (loop-at    68.57343)
+)
