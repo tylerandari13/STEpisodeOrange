@@ -12,10 +12,10 @@
 
 **Alternatively you could:**
 
-* Make sure you're on a nightly build.
+* Make sure you're on a nightly build and back up anything in `%appdata%/supertux/supertux2`.
 
-* Copy the SuperTux data directory and save it for later.
+* Go to `%appdata%/supertux2`.
 
-* Extract Episode Orange in the data directory. (Not the one you copied.) (also dont forget to move `Levels/Episode_Orang` to `%appdata%/supertux/supertux2/Levels`)
+* Extract Episode Orange in this directory.
 
 If you followed the steps correctly you should be able to use this version of Episode Orange.
