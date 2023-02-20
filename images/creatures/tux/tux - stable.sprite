@@ -145,7 +145,7 @@
          (name "small-fall-left")
          (fps 15.0)
          (hitbox 8 16 32 32)
-         (mirror-action "small-jump-right"))
+         (mirror-action "small-fall-right"))
 		 
        (action
          (name "small-skid-right")
@@ -415,7 +415,7 @@
          (name "big-fall-left")
          (fps 15.0)
          (hitbox 16 14 32 64)
-         (mirror-action "big-jump-right"))
+         (mirror-action "big-fall-right"))
 
        (action
          (name "big-skid-left")
@@ -586,32 +586,45 @@
          (name "fire-walk-right")
          (fps 15.0)
          (hitbox 16 14 32 64)
-         (clone-action "big-walk-right"))
+         (images "fire/walk-0.png"
+                 "fire/walk-1.png"
+                 "fire/walk-2.png"
+                 "fire/walk-3.png"
+                 "fire/walk-4.png"
+                 ;"fire/walk-5.png"
+                 ;"fire/walk-6.png"
+                 ;"fire/walk-7.png"
+                 ))
 
        (action
          (name "fire-walk-left")
          (fps 15.0)
          (hitbox 16 14 32 64)
-         (mirror-action "big-walk-right"))
+         (mirror-action "fire-walk-right"))
 
        (action
          (name "fire-stand-right")
-         (fps 15.0)
+         (fps 5.0)
          (hitbox 16 14 32 64)
-         (clone-action "big-stand-right"))
+         (images "fire/stand-1.png"
+                 "fire/stand-0.png"
+                 "fire/stand-1.png"
+                 "fire/stand-2.png"))
 
        (action
          (name "fire-stand-left")
-         (fps 15.0)
+         (fps 5.0)
          (hitbox 16 14 32 64)
-         (mirror-action "big-stand-right"))
-
-       (action
+         (mirror-action "fire-stand-right"))
+     
+     (action
          (name "fire-walljump-right")
          (fps 24.0)
          (loops 1)
          (hitbox 24 14 32 64)
-         (clone-action "big-walljump-right"))
+         (images ;"fire/fire-walljump-0.png"
+                 ;"fire/fire-walljump-1.png"
+                 "fire/walljump-2.png"))
 
        (action
          (name "fire-walljump-left")
@@ -622,147 +635,214 @@
 
        (action
          (name "fire-jump-right")
-         (fps 16.0)
+         (fps 15.0)
          (hitbox 16 14 32 64)
-         (loops 1)
-         (clone-action "big-jump-right"))
+         (images "fire/jump-0.png"))
 
        (action
          (name "fire-jump-left")
-         (fps 16.0)
+         (fps 15.0)
          (hitbox 16 14 32 64)
-         (loops 1)
-         (mirror-action "big-jump-right"))
+         (mirror-action "fire-jump-right"))
      
      (action
          (name "fire-fall-right")
-         (fps 16.0)
+         (fps 15.0)
          (hitbox 16 14 32 64)
-         (loops 1)
-         (clone-action "big-jump-right"))
+         (images "fire/jump-0.png"
+                 "fire/fall-1.png"
+                 "fire/fall-2.png"
+                 "fire/fall-3.png"
+
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"
+                 "fire/fall-3.png"))
 
        (action
          (name "fire-fall-left")
-         (fps 16.0)
+         (fps 15.0)
          (hitbox 16 14 32 64)
-         (loops 1)
-         (mirror-action "big-jump-right"))
-
-       (action
-         (name "fire-skid-right")
-         (hitbox 16 14 32 64)
-         (clone-action "big-skid-right"))
+         (mirror-action "fire-jump-right"))
 
        (action
          (name "fire-skid-left")
          (hitbox 16 14 32 64)
-         (mirror-action "big-skid-right"))
+         (images "fire/skid-0.png"))
+
+       (action
+         (name "fire-skid-right")
+         (hitbox 16 14 32 64)
+         (mirror-action "fire-skid-left"))
 
        (action
          (name "fire-kick-right")
          (hitbox 16 14 32 64)
-         (clone-action "big-kick-right"))
+         (images "fire/skid-0.png"))
 
        (action
          (name "fire-kick-left")
          (hitbox 16 14 32 64)
-         (mirror-action "big-kick-right"))
+         (mirror-action "fire-kick-right"))
 
        (action
          (name "fire-idle-right")
          (fps 5.0)
          (hitbox 16 14 32 64)
-         (clone-action "big-idle-right"))
+         ;(images "fire/idle-0.png"
+         ;        "fire/idle-1.png"
+         ;        "fire/idle-0.png"
+         (clone-action "fire-stand-right"
+         ))
 
        (action
          (name "fire-idle-left")
          (hitbox 16 14 32 64)
-         (mirror-action "big-idle-right"))
+         (mirror-action "fire-idle-right"))
 
        (action
          (name "fire-climbing-right")
          (hitbox 9 14 25 64)
          (fps 15.0)
-         (clone-action "big-climbing-right"))
+         (images "fire/ladder-0.png"
+                 "fire/ladder-1.png"
+                 "fire/ladder-2.png"
+                 "fire/ladder-3.png"
+                 "fire/ladder-4.png"
+                 "fire/ladder-3.png"
+                 "fire/ladder-2.png"
+                 "fire/ladder-1.png"))
 
        (action
          (name "fire-climbing-left")
          (hitbox 9 14 25 64)
          (fps 15.0)
-         (mirror-action "big-climbing-right"))
+         (mirror-action "fire-climbing-right"))
 
        (action
          (name "fire-duck-right")
          (hitbox 16 45 32 32)
-         (clone-action "big-duck-right"))
+         (images "fire/duck-0.png"))
 
        (action
          (name "fire-duck-left")
          (hitbox 16 45 32 32)
-         (mirror-action "big-duck-right"))
+         (mirror-action "fire-duck-right"))
 
        (action
          (name "fire-backflip-right")
          (hitbox 16 37 32 32)
-         (clone-action "big-backflip-right"))
+         ;(images "fire/backflip.png"))
+         (clone-action "small-swimjump-right"))
 
        (action
          (name "fire-backflip-left")
          (hitbox 16 37 32 32)
          (fps 18.0)
-         (mirror-action "big-backflip-right"))
+         (mirror-action "fire-backflip-right"))
 
        (action
          (name "fire-buttjump-right")
          (hitbox 16 14 32 46)
          (fps 20.0)
          (loops 1)
-         (clone-action "big-buttjump-right"))
+         (images "fire/buttjump-0.png"
+                 "fire/buttjump-1.png"
+                 "fire/buttjump-2.png"
+                 "fire/buttjump-3.png"
+                 "fire/buttjump-4.png"
+                 "fire/buttjump-5.png"
+                 ;"fire/buttjump-6.png"
+                 ))
 
        (action
          (name "fire-buttjump-left")
          (hitbox 16 14 32 46)
          (fps 20.0)
          (loops 1)
-         (mirror-action "big-buttjump-right"))
+         (mirror-action "fire-buttjump-right"))
 
        (action
          (name "fire-swimming-right")
          (fps 15.0)
          (hitbox 29 24 32 64)
-         (clone-action "big-swimming-right"))
+         (images "fire/swim-0.png"
+                 "fire/swim-1.png"
+                 "fire/swim-2.png"
+                 "fire/swim-3.png"
+                 "fire/swim-4.png"
+                 "fire/swim-5.png"))
 
        (action
          (name "fire-swimming-left")
          (fps 15.0)
          (hitbox 29 24 32 64)
-         (mirror-action "big-swimming-right"))
-
-       (action
+         (mirror-action "fire-swimming-right"))
+         
+     (action
          (name "fire-floating-right")
          (fps 11.0)
          (hitbox 29 24 32 64)
-         (clone-action "big-floating-right"))
+         (images "fire/swim-1.png"
+                 "fire/swim-2.png"
+                 "fire/swim-3.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"
+                 "fire/swim-0.png"))
 
        (action
          (name "fire-floating-left")
          (fps 11.0)
          (hitbox 29 24 32 64)
-         (mirror-action "big-floating-right"))
+         (mirror-action "fire-floating-right"))
 
        (action
          (name "fire-swimjump-right")
          (fps 10.0)
          (loops 1)
          (hitbox 29 24 32 64)
-         (clone-action "big-swimjump-right"))
+         ;(images "fire/swim-0.png"))
+         (clone-action "small-swimjump-right"))
 
        (action
          (name "fire-swimjump-left")
          (fps 10.0)
          (loops 1)
          (hitbox 29 24 32 64)
-         (mirror-action "big-swimjump-right"))
+         (mirror-action "fire-swimjump-right"))
 
 ; Ice Tux
 
