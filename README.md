@@ -10,12 +10,23 @@
 
 * Go to `%appdata%/supertux2/addons` and put the zip file in.
 
+Once the addon is in and enabled you need to restart SuperTux for the changes to take effect.
+Keep in mind the resource pack build was made on 0.6.3 while the new player sprites will be made for 0.7.0 (which will also have texture packs). This will cause some visual glitches so be warned.
+
 **Alternatively you could:**
 
-* Make sure you're on a nightly build and back up anything in `%appdata%/supertux/supertux2`.
+* It is prefered you use a nightly build but it is not required at the moment.
 
-* Go to `%appdata%/supertux2`.
+* Make a new folder somewhere. (can be anywhere you can get the path for)
 
-* Extract Episode Orange in this directory.
+* Copy the path to this folder. (will refer to this path as `<EpisodeOrange>` in future steps)
+
+* Extract Episode Orange in this folder.
+
+* Go to wherever your supertux application is. (If you installed with the defaults it should be in `users/<user>/program files/supertux/supertux2/bin`)
+
+* Type `cmd` in the path bar up at the top to open the command line.
+
+* Run the command `supertux2 --userdir <EpisodeOrange>` with `<EpisodeOrange>` being the path refered to earlier.
 
 If you followed the steps correctly you should be able to use this version of Episode Orange.
