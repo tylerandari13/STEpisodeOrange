@@ -102,18 +102,13 @@ function MoveToBulk(things, time = 0.01, latency = 3) {
 				
 				wait(time)
 			}
-		}
-
-
-		local test = false
-		foreach(i, thing in finished) {
-			
-			if (thing == false)
-				test = true
-			
-			
-		}
-		if (test == false)
+		}	
+		if(!array.find(false)) {
 			running = false
+			foreach(i, thing in things) {
+				thing[0].move(newx, newy)
+				wait(time)
+			}
+		}
 	}
 }
