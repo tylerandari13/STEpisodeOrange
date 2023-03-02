@@ -595,50 +595,57 @@
        (action
          (name "big-crawl-right")
          (fps 12.0)
-         (hitbox 32 46 64 32)
-         (images "big/crawl-0.png"
-                 "big/crawl-1.png"
-                 "big/crawl-2.png"
-                 "big/crawl-3.png"
-                 "big/crawl-4.png"
-                 "big/crawl-5.png"
-                 "big/crawl-6.png"
-                 "big/crawl-7.png"))
+         (hitbox 21 5 64 32)
+         (images "big/crawl0000.png"
+                 "big/crawl0001.png"
+                 "big/crawl0002.png"
+                 "big/crawl0003.png"
+                 "big/crawl0004.png"
+                 "big/crawl0005.png"))
 
        (action
          (name "big-crawl-left")
          (fps 12.0)
-         (hitbox 32 46 64 32)
+         (hitbox 21 5 64 32)
          (mirror-action "big-crawl-right"))
 
        (action
          (name "big-backflip-right")
-         (fps 18.0)
-         (hitbox 19 28 32 32)
-         (images "big/backflip-0.png"
-                 "big/backflip-1.png"
-                 "big/backflip-2.png"
-                 "big/backflip-3.png"
-                 "big/backflip-4.png"
-                 "big/backflip-5.png"))
+         (fps 36.0)
+         (hitbox 29 38 32 32)
+         (images "big/backflip0000.png"
+                 "big/backflip0001.png"
+                 "big/backflip0002.png"
+                 "big/backflip0003.png"
+                 "big/backflip0004.png"
+                 "big/backflip0005.png"
+                 "big/backflip0006.png"
+                 "big/backflip0007.png"
+                 "big/backflip0008.png"
+                 "big/backflip0009.png"
+                 "big/backflip0010.png"
+                 "big/backflip0011.png"
+                 "big/backflip0012.png"))
 
        (action
          (name "big-backflip-left")
-         (fps 18.0)
-         (hitbox 19 28 32 32)
+         (fps 36.0)
+         (hitbox 29 38 32 32)
          (mirror-action "big-backflip-right"))
 
        (action
          (name "big-buttjump-right")
-         (fps 30.0)
+         (fps 32.0)
          (loops 1)
          (hitbox 16 14 32 46)
-         (images "big/buttjump-0.png"
-                 "big/buttjump-1.png"
-                 "big/buttjump-2.png"
-                 "big/buttjump-3.png"
-                 "big/buttjump-4.png"
-                 "big/buttjump-5.png"))
+         (images "big/buttjump0000.png"
+                 "big/buttjump0001.png"
+                 "big/buttjump0002.png"
+                 "big/buttjump0003.png"
+                 "big/buttjump0004.png"
+                 "big/buttjump0005.png"
+                 "big/buttjump0006.png"
+                 "big/buttjump0007.png"))
 
        (action
          (name "big-buttjump-left")
@@ -652,12 +659,10 @@
          (fps 20.0)
          (loops 1)
          (hitbox 16 14 32 46)
-         (images "big/buttjump-6.png"
-                 "big/buttjump-7.png"
-                 "big/buttjump-8.png"
-                 "big/buttjump-9.png"
-                 "big/buttjump-10.png"
-                 "big/buttjump-11.png"))
+         (images "big/buttjump0008.png"
+                 "big/buttjump0009.png"
+                 "big/buttjump0010.png"
+                 "big/buttjump0011.png"))
 
        (action
          (name "big-stomp-left")
@@ -668,59 +673,27 @@
 
          (action
          (name "big-slide-right")
-         (fps 30.0)
-         (loops 1)
-         (hitbox 32 46 64 32)
-         (images "big/slide-0.png"
-                 "big/slide-1.png"
-                 "big/slide-2.png"
-                 "big/slide-3.png"
-                 "big/slide-4.png"))
+         (hitbox 29 24 32 32)
+         (images "small/slidesmall1.png"))
 
        (action
          (name "big-slide-left")
          (fps 30.0)
          (loops 1)
-         (hitbox 32 46 64 32)
+         (hitbox 29 24 32 32)
          (mirror-action "big-slide-right"))
 
          (action
          (name "big-slidejump-right")
          (fps 18.0)
-         (hitbox 19 28 32 32)
-         (images "big/slide_jump-0.png"
-                 "big/slide_jump-1.png"
-                 "big/slide_jump-2.png"
-                 "big/slide_jump-3.png"
-                 "big/slide_jump-4.png"
-                 "big/slide_jump-5.png"))
+         (hitbox 29 24 32 32)
+         (clone-action "big-slide-right"))
 
        (action
          (name "big-slidejump-left")
          (fps 18.0)
          (hitbox 19 28 32 32)
          (mirror-action "big-slidejump-right"))
-
-       (action
-         (name "big-float-right")
-         (fps 10.0)
-         (hitbox 32 15 64 32)
-         (images "big/swim_idle-0.png"
-                 "big/swim_idle-1.png"
-                 "big/swim_idle-2.png"
-                 "big/swim_idle-3.png"
-                 "big/swim_idle-1.png"
-                 "big/swim_idle-0.png"
-                 "big/swim_idle-4.png"
-                 "big/swim_idle-5.png"
-                 "big/swim_idle-6.png"
-                 "big/swim_idle-5.png"))
-
-       (action
-         (name "big-float-left")
-         (fps 10.0)
-         (hitbox 32 15 64 32)
-         (mirror-action "big-float-right"))
 
        (action
          (name "big-swim-right")
@@ -731,9 +704,7 @@
                  "big/swim-2.png"
                  "big/swim-3.png"
                  "big/swim-4.png"
-                 "big/swim-5.png"
-                 "big/swim-6.png"
-                 "big/swim-7.png"))
+                 "big/swim-5.png"))
 
        (action
          (name "big-swim-left")
@@ -742,15 +713,22 @@
          (mirror-action "big-swim-right"))
 
        (action
+         (name "big-float-right")
+         (fps 10.0)
+         (hitbox 32 15 64 32)
+         (clone-action "big-swim-right"))
+
+       (action
+         (name "big-float-left")
+         (fps 10.0)
+         (hitbox 32 15 64 32)
+         (mirror-action "big-float-right"))
+
+       (action
          (name "big-boost-right")
          (fps 18.0)
          (hitbox 32 15 64 32)
-         (images "big/swim-0.png"
-                 "big/swim-1.png"
-                 "big/swim-2.png"
-                 "big/swim-8.png"
-                 "big/swim-5.png"
-                 "big/swim-6.png"))
+         (clone-action "big-float-right"))
 
        (action
          (name "big-boost-left")
@@ -760,12 +738,8 @@
 
        (action
          (name "big-swimjump-right")
-         (fps 15.0)
-         (loops 1)
          (hitbox 32 15 64 32)
-         (images "big/swim_jump-0.png"
-                 "big/swim_jump-1.png"
-                 "big/swim_jump-2.png"))
+         (images "big/swim-3.png"))
 
        (action
          (name "big-swimjump-left")

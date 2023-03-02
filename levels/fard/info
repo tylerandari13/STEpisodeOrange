@@ -1,0 +1,7 @@
+(supertux-level-subset
+  (title (_ "fard"))
+  (description (_ ""))
+  (levelset #t)
+  (contrib-type "user")
+  (hide-from-contribs #f)
+)

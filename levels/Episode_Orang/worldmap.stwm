@@ -11,7 +11,7 @@
       (color 1 1 1)
     )
     (level
-      (level "level1.stl")
+      (level "test.stl")
       (x 9)
       (y 6)
     )
