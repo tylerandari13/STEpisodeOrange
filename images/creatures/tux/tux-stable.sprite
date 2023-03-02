@@ -567,20 +567,20 @@
          (name "big-climb-right")
          (fps 15.0)
          (hitbox 16 16 32 64)
-         (images "big/ladder-0.png"
-                 "big/ladder-1.png"
-                 "big/ladder-2.png"
-                 "big/ladder-3.png"
-                 "big/ladder-4.png"
-                 "big/ladder-3.png"
-                 "big/ladder-2.png"
-                 "big/ladder-1.png"))
+         (images "big/climb-0.png"
+                 "big/climb-1.png"
+                 "big/climb-2.png"
+                 "big/climb-3.png"
+                 "big/climb-4.png"
+                 "big/climb-5.png"
+                 "big/climb-6.png"
+                 "big/climb-7.png"))
 
        (action
          (name "big-climb-left")
          (fps 15.0)
          (hitbox 16 16 32 64)
-         (clone-action "big-climb-right"))
+         (mirror-action "big-climb-right"))
 
        (action
          (name "big-duck-right")
