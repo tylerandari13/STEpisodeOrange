@@ -1,31 +1,36 @@
 (supertux-sprite
   (action
     (name "left")
-    (hitbox 5 8 32 32)
-    (fps 14)
-    (images "apple-0.png"
-            "apple-1.png"
-            "apple-2.png"
-            "apple-3.png"
-            "apple-4.png"
-            "apple-5.png"
-            "apple-6.png"
-            "apple-7.png")
+    (hitbox 16 16 32 32)
+    (fps 24)
+    (images "apple0000.png"
+            "apple0001.png"
+            "apple0002.png"
+            "apple0003.png"
+            "apple0004.png"
+            "apple0005.png"
+            "apple0006.png"
+            "apple0007.png"
+            "apple0008.png"
+            "apple0009.png"
+            "apple0010.png"
+            "apple0011.png"
+            "apple0012.png"
+            "apple0013.png"
+            )
   )
   (action
     (name "right")
-    (hitbox 7 8 32 32)
-    (fps 14)
+    (hitbox 16 16 32 32)
+    (fps 24)
     (mirror-action "left")
   )
   (action
     (name "squished-left")
-    (hitbox 1 -19 31.8 31.8)
     (images "squished.png")
   )
   (action
     (name "squished-right")
-    (hitbox 1 -19 31.8 31.8)
     (mirror-action "squished-left")
   )
 )

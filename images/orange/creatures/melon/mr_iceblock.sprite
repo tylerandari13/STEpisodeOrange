@@ -2,35 +2,33 @@
 	(action
 	  (name "left")
 	  (hitbox 5 8 32 32)
-	  (fps 14)
-	  (images "melon-0.png"
-			"melon-1.png"
-			"melon-2.png"
-			"melon-3.png"
-			"melon-4.png"
-			"melon-5.png"
-			"melon-6.png"
-			"melon-7.png"))
+	  (fps 24)
+	  (images "melon0000.png"
+	  	      "melon0001.png"
+	  	      "melon0002.png"
+	  	      "melon0003.png"
+	  	      "melon0004.png"
+	  	      "melon0005.png"
+	  	      "melon0006.png"
+	  	      "melon0007.png"
+	  	      "melon0008.png"
+	  	      "melon0009.png"
+	  	      "melon0010.png"
+	  	      "melon0011.png"
+	  	      "melon0012.png"
+	  	      ))
 
 	(action
 	  (name "right")
 	  (hitbox 7 8 32 32)
-	  (fps 14)
+	  (fps 24)
 	  (mirror-action "left"))
 
-	(action (name "falling-left")
-	  (hitbox 5 8 32 32)
-	  (images "stomped-0.png"))
-
-	(action (name "falling-right")
-	  (hitbox 5 8 32 32)
-	  (mirror-action "falling-left"))
-
 	(action (name "flat-left")
-	  (hitbox 5 14 33 26)
-	  (images "stomped-0.png"))
+	  (hitbox 0  0 32 32)
+	  (images "stomp.png"))
 
 	(action (name "flat-right")
-	  (hitbox 7 14 33 26)
+	  (hitbox 0  0 32 32)
 	  (mirror-action "flat-left"))
 	  )

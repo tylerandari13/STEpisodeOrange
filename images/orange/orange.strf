@@ -1,6 +1,6 @@
 (supertux-tiles
   (tilegroup
-    (name (_ "ground"))
+    (name (_ "Orange Island"))
     (tiles
       27 1 28 0
       2 3 4 0
@@ -12,6 +12,16 @@
       11 12 13 14
       15 6 6 16
       17 18 19 20
+    )
+  )
+
+  (tilegroup
+    (name (_ "Sweet Swale"))
+    (tiles
+      147 148 159 149
+      150 151 160 152
+      153 154 161 155
+      156 157 162 158
     )
   )
 
@@ -62,6 +72,22 @@
       103 104 111 112
       117 118
 
+    )
+  )
+
+  (tilegroup
+    (name (_ "Secret Area"))
+    (tiles
+      170 171 172 0
+      177 178 179 0
+      184 185 186 0
+      0 0 0 0
+      166 167 168 169
+      173 174 175 176
+      180 181 182 183
+      187 188 189 190
+      0 0 0 0
+      163  164 165 0
     )
   )
 
@@ -347,6 +373,60 @@
      (images "tiles/behind.png")
    )
 
+  (tiles
+    (width 3)
+    (height 4)
+    (ids
+      147 148 149
+      150 151 152
+      153 154 155
+      156 157 158
+     )
+     (attributes
+       0 0 0
+       1 1 1
+       1 1 1
+       1 1 1
+     )
+     (images "tiles/sweetswale_ground.png")
+   )
 
-          ;; tiling starts at 130, free tiles are 50, 62, 63, 74, 76, 79, 109 110
+  (tiles
+    (width 1)
+    (height 4)
+    (ids
+      159
+      160
+      161
+      162
+     )
+     (attributes
+       0
+       1
+       1
+       1
+     )
+     (images "tiles/sweetswale_extras.png")
+   )
+
+  (tiles
+    (width 7)
+    (height 4)
+    (ids
+      163 164 165 166 167 168 169
+      170 171 172 173 174 175 176
+      177 178 179 180 181 182 183
+      184 185 186 187 188 189 190
+     )
+     (attributes
+      1 1 1 1 1 1 1
+      1 1 1 1 0 0 1
+      1 1 1 1 0 0 1
+      1 1 1 1 1 1 1
+     )
+     (images "tiles/secretarea.png")
+   )
+
+
+          ;; tiling starts at 155, free tiles are 50, 62, 63, 74, 76, 79, 109 110
 )
