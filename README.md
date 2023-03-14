@@ -23,7 +23,7 @@ Keep in mind the resource pack build was made on 0.6.3 while the new player spri
 
 * Extract Episode Orange in this folder.
 
-* Go to wherever your supertux application is. (If you installed with the defaults it should be in `users/<user>/program files/supertux/supertux2/bin`)
+* Go to wherever your supertux application is. (If you installed with the defaults it should be in `C:\Program Files\SuperTux\bin`)
 
 * Type `cmd` in the path bar up at the top to open the command line.
 
