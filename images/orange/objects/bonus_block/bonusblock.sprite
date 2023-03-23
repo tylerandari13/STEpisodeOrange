@@ -2,23 +2,29 @@
       (action
          (fps 15)
          (name "normal")
-         (images "full-0.png"
-                 "full-1.png"
-                 "full-2.png"
-                 "full-3.png"
-                 "full-4.png"
-                 "full-2.png"
-                 "full-1.png"
-                 "full-0.png"
-                 "full-0.png"
-                 "full-0.png"
-                 ))
+         (hitbox 32 32 32 32)
+         (images "blue/basket0000.png"
+                 "blue/basket0001.png"
+                 "blue/basket0002.png"
+                 "blue/basket0003.png"
+                 "blue/basket0004.png"
+                 "blue/basket0005.png"
+                 "blue/basket0006.png"
+                 "blue/basket0007.png"
+                 "blue/basket0008.png"
+                 "blue/basket0007.png"
+                 "blue/basket0006.png"
+                 "blue/basket0005.png"
+                 "blue/basket0004.png"
+                 "blue/basket0003.png"
+                 "blue/basket0002.png"
+                 "blue/basket0001.png"
+      ))
       (action
          (name "empty")
-         (surfaces
-          (surface
-           (diffuse-texture (file "empty.png"))
-           (displacement-texture (file "displacement.png")))))
+         (hitbox 32 32 32 32)
+         (images "blue/basket0009.png"
+      ))
       (action
          (name "on")
          (images "on.png"))
