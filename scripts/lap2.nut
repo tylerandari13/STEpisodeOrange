@@ -37,14 +37,15 @@ function exit_bowl() {
 }
 
 function lap_2(time = 60, music = "") {
-	time = time + 1
+	set_data("Lap2_Time", time + 1)
 	if(!music == "") play_music(music)
 	while(true) {
 		if (get_data_exists("Lap2Complete") && get_data("Lap2Complete")) {
 			clear_data("Lap2Complete")
+			clear_data("Lap2_Time")
 			wait(60)
 		}
-		if (time < 1) {
+		if (get_data("Lap2_Time") < 1) {
 			Text.set_front_fill_color(1, 0.3, 0.3, 1)
 			Text.set_back_fill_color(0.9, 0, 0, 1)
 			Text.set_text("Lap 2   Times Up!")
@@ -56,12 +57,11 @@ function lap_2(time = 60, music = "") {
 			wait(2)
 			break
 		}
-		time = time - 1
-		Text.set_text("Lap 2   " + time.tostring())
-		//Text.set_text("Lap 2   " + number_to_time_string(time))
-		//Text.set_text("Lap 2   " + (time / 60).tointeger().tostring())
+		set_data("Lap2_Time", get_data("Lap2_Time") - 1)
+		Text.set_text("Lap 2   " + number_to_time_string(get_data("Lap2_Time")))
 		wait(1)
 	}
+	clear_data("Lap2_Time")
 	while(true) {
 		Tux.kill(false)
 		wait(0.01)

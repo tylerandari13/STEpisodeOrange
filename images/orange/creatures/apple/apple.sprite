@@ -33,4 +33,36 @@
     (name "squished-right")
     (mirror-action "squished-left")
   )
+
+  ;actions for tutorial apples
+
+  (action
+    (name "normal")
+    (fps 3)
+    (hitbox 16 17 32 32)
+    (images "tutorial0000.png"
+      "tutorial0001.png"
+      )
+  )
+  (action
+    (name "swinging")
+    (hitbox 2 -22 32 32)
+    (images "squished.png"
+      "squished.png"
+      "squished.png"
+      "squished.png"
+      "squished.png"
+      "squished.png"
+      "squished.png"
+      "squished.png"
+      "squished.png"
+      "squished.png"
+      )
+  )
+  (action
+    (name "breaking")
+    (fps 0.2)
+    (hitbox 2 -22 32 32)
+    (clone-action "swinging")
+  )
 )

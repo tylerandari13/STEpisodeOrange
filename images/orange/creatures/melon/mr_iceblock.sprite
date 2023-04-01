@@ -1,7 +1,7 @@
 (supertux-sprite
 	(action
 	  (name "left")
-	  (hitbox 5 8 32 32)
+	  (hitbox 16 18 32 32)
 	  (fps 24)
 	  (images "melon0000.png"
 	  	      "melon0001.png"
@@ -20,15 +20,15 @@
 
 	(action
 	  (name "right")
-	  (hitbox 7 8 32 32)
+	  (hitbox 16 18 32 32)
 	  (fps 24)
 	  (mirror-action "left"))
 
 	(action (name "flat-left")
-	  (hitbox 0  0 32 32)
+	  (hitbox -2 1 32 32)
 	  (images "stomp.png"))
 
 	(action (name "flat-right")
-	  (hitbox 0  0 32 32)
+	  (hitbox -2 1 32 32)
 	  (mirror-action "flat-left"))
-	  )
+)

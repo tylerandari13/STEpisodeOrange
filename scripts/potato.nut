@@ -1,15 +1,17 @@
 import("scripts/datastore.nut")
 
 function switch_character(char, spawnpoint = "main", sector = "main", spawnx = 0, spawny = 0, sectordimensions = [100, 35]) {
-	//PLACEHOLDER TEXT
+	//PLACEHOLDER TEXT HERE
+	    //E
+	//PLACEHOLDER TEXT HERE
 	set_data("current_character", char[0])
 
-	local cameraxoffset = -960
-	local camerayoffset = -509
+	//local cameraxoffset = -960
+	//local camerayoffset = -509
 	local turnoffset = 25
-	local doublejumps = 2
+	local doublejumps = 5
 	local maxstill = 5
-	local jumpheight = 500
+	local jumpheight = 600
 
 	local jumpsleft = doublejumps
 	local stillframes = 0
@@ -17,6 +19,7 @@ function switch_character(char, spawnpoint = "main", sector = "main", spawnx = 0
 	local canjump = true
 	local isalreadysmall = false
 	local mounted = true
+	
 
 	Level.spawn(sector, spawnpoint)
 
@@ -54,7 +57,7 @@ function switch_character(char, spawnpoint = "main", sector = "main", spawnx = 0
 			Tux.set_pos(keephimat[0], keephimat[1] + 1)
 		}
 
-		Camera.set_pos(char[1].get_pos_x() + cameraxoffset - currentturnoffset, char[1].get_pos_y() + camerayoffset)
+		Camera.set_pos((char[1].get_pos_x() + currentturnoffset) - (Camera.get_screen_width() / 2), char[1].get_pos_y() - (Camera.get_screen_height() / 2))
 
 		if(char[2].get_velocity_x() > 0) {
 			char[1].set_action("ride-right")
@@ -70,30 +73,26 @@ function switch_character(char, spawnpoint = "main", sector = "main", spawnx = 0
 
 		if(char[1].get_action().find("left")) {
 			char[1].set_pos(char[2].get_pos_x() + turnoffset, char[2].get_pos_y())
-			currentturnoffset = turnoffset
+			currentturnoffset = 0
 		}
 		else if(char[1].get_action().find("right")) {
 			char[1].set_pos(char[2].get_pos_x(), char[2].get_pos_y())
-			currentturnoffset = turnoffset * -1
+			currentturnoffset = 32
 		}
 
 		//if(Tux.get_velocity_y() == -505 || Tux.get_velocity_y() == -565) {
-		if(Tux.get_action().find("jump")) {
+		if(Tux.get_velocity_y() < 0) {
+		//if(Tux.get_action().find("jump")) {
 			if(canjump) {
 				canjump = false
-				if(jumpsleft > 0) {
-					jumpsleft = jumpsleft - 1
-					char[2].set_velocity(char[2].get_velocity_x(), jumpheight * -1)
-				}
-				//char[2].set_velocity(char[2].get_velocity_x(), jumpheight * -1)
-			} else {
-				if(jumpsleft > 0) {
-					jumpsleft = jumpsleft - 1
-					char[2].set_velocity(char[2].get_velocity_x(), jumpheight * -1)
-				}
+				char[2].set_velocity(char[2].get_velocity_x(), jumpheight * -1)
+			} else if(jumpsleft > 0) {
+				jumpsleft = jumpsleft - 1
+				char[2].set_velocity(char[2].get_velocity_x(), jumpheight * -1)
 			}
-		} else if(Tux.get_velocity_y() == 0) {
+		} else if(char[2].get_velocity_y() == 0) {
 			canjump = true
+			jumpsleft = doublejumps
 		}
 
 		//display(stillframes.tostring() + " : " + jumpsleft.tostring())
