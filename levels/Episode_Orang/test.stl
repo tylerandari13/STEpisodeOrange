@@ -37,11 +37,10 @@ last = MrBrickO.get_pos_x()
       (image "images/background/antarctic/arctis2.png")
     )
     (background
-      (scroll-offset-x 320)
-      (scroll-offset-y 336)
+      (name "ttee")
       (color 1 1 1)
       (speed 0.5)
-      (image "images/background/misc/transparent_up.png")
+      (image "/images/orange/objects/bonus_block/bonusblock.sprite")
     )
     (bonusblock
       (contents "script")

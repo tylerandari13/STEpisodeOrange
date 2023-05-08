@@ -1,0 +1,5 @@
+(supertux-music
+  (file "../../sounds/orange/light_hummimg.wav")
+  (loop-begin 2.2)
+  (loop-at    5.575)
+)

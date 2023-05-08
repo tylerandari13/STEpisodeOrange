@@ -1,7 +1,5 @@
 local prefix = "Episode_Orange_Data_"
 
-//if(!(prefix in state)) state[prefix] <- {}
-
 function set_data(index, value) {
 	Level[prefix + index.tostring()] <- value
 	return value
