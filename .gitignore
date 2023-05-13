@@ -1,10 +1,12 @@
 addons
 profile1
+profile4
 config
 ver_info.nfo
 
 # Remove this once its needed.
 images/orange/creatures/shadow_orange
+
 
 **/*.png~
 **/*.kra~
