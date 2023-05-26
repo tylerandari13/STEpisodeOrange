@@ -1,4 +1,4 @@
-function lerp(a, b, t) return a + (b - a) * t
+//function lerp(a, b, t) return a + (b - a) * t
 
 function new_thread(funnction, name = "") {
 	//local name = funnction.tostring()
@@ -34,25 +34,6 @@ function number_to_time_string(seconds) {
 	return seconds.tostring()
 }
 
-function hold_player_at(x, y, on = true) {
-	while(on == true) {
-		if(Tux.get_bonus() == "none") {
-			Tux.set_pos(x, y + 33)
-		} else {
-			Tux.set_pos(x, y + 1)
-		}
-		wait(0.01)
-	}
-}
-
-function hold_player_at_spawnpoint(sector, spawnpoint, on = true) {
-	while(on == true) {
-		Level.spawn(sector, spawnpoint)
-		wait(0.01)
-	}
-}
-
-
 function hold_camera_on(object, scripted = true, offsetx = 0, offsety = 0, sectrodimensions = [35, 100]) {
 	while(true) {
 		local posx = 0
@@ -81,3 +62,27 @@ function hold_camera_on(object, scripted = true, offsetx = 0, offsety = 0, sectr
 		wait(0.01)
 	}
 }
+
+function move_towards(a, b, distance = 1) {
+    if(distance == 0) return a
+    if(a > b) return a - distance
+    if(a < b) return a + distance
+    return a
+}
+
+function error_message(message) {
+	new_thread(function(massage) {
+		throw(massage)
+	}, message).call(message)
+}
+
+/*
+function move_towards(a, b, distance = 1) {
+    local vector = b - a
+    local length = vector * vector
+    local unitVector = vector / length
+    return a + unitVector * distance
+}
+*/
+//function move_towards(a, b, distance = 1) return a + ((b - a)^2 / (b - a)^2) + ((b - a)^2 / (b - a)^2) * distance
+

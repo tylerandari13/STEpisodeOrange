@@ -1,5 +1,5 @@
 import("scripts/datastore.nut")
-import("scripts/time.nut")
+import("scripts/util.nut")
 
 function enter_bowl(objectthing1, objectthing2, time = 0.7) {
 	set_data("MadeItToLap2", true)
@@ -36,7 +36,21 @@ function exit_bowl() {
 	} else return false
 }
 
-function lap_2(time = 60, music = "") {
+function lap_2(Grumbel, waittime = 2, speed = 2.5, music = "") {
+	if(music != "" && music != null) play_music(music)
+	wait(waittime)
+	while(true) {
+		Grumbel.set_pos(move_towards(Grumbel.get_pos_x(), Tux.get_x(), speed), move_towards(Grumbel.get_pos_y(), Tux.get_y(), speed))
+		//display(Grumbel.get_pos_x().tostring() + " : " + Grumbel.get_pos_y().tostring())
+
+		wait(0.01)
+	}
+}
+
+function lap_2_old(time = 60, music = "") {
+	//print("[WARNING] : \"lap_2(time, music)\" is depricated. \"Use lap_2(Grumbel)\" instead.")
+	error_message("\"lap_2(time, music)\" is depricated. \"Use lap_2(Grumbel)\" instead.")
+	//
 	set_data("Lap2_Time", time + 1)
 	if(!music == "") play_music(music)
 	while(true) {

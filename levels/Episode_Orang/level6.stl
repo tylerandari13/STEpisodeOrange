@@ -1081,16 +1081,11 @@ enter_secret(\"secret1\", Secret1, SecretWind1)")
       (scroll-speed-x -75)
       (scroll-speed-y 75)
       (speed 0)
-      (image "/images/orange/backgrounds/secretarea.png")
+      (image "/images/orange/backgrounds/secretarea_salt.png")
     )
     (camera
       (name "Camera")
       (mode "normal")
-    )
-    (gradient
-      (top_color 0.3 0.4 0.75)
-      (bottom_color 1 1 1)
-      (z-pos -301)
     )
     (invisible_wall
       (width 96)
