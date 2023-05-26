@@ -15,7 +15,7 @@ Keep in mind the resource pack build was made on 0.6.3 while the new player spri
 
 **Alternatively you could:**
 
-* It is preferred you use a nightly build but it is not required at the moment.
+* It is preferred you use a nightly build because Episode Orange uses some Squirrel functions that are not availableon 0.6.3.
 
 * Make a new folder somewhere. (can be anywhere you can get the path for)
 
